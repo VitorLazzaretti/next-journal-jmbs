@@ -1,0 +1,35 @@
+import React from "react";
+import { useRouter } from "next/router";
+import { MenuItemProps } from "../../types/MenuItemProps";
+import Icon from "../Icon/Icon";
+
+type props = {
+  menuInfo: MenuItemProps;
+  selected: boolean;
+  open: boolean;
+}
+
+const MenuItem = ({ menuInfo, selected, open }: props) => {
+  const query = useRouter();
+
+  return (
+    <div onClick={() => { query.replace(`/${menuInfo.toPage}`); }}>
+      <div className='w-full flex center justify-start'>
+        <div className='w-24 flex justify-center items-center'>
+          <Icon
+            name={menuInfo.iconName}
+            selected={selected}
+          />
+        </div>
+
+        <div
+          className={`flex-1 ${open ? "flex" : "hidden"} items-center pl-7 ${selected ? "text-[#DB1010]" : "text-[#5E5E5E]"} border-l-[1px] border-solid border-gray-300`}
+        >
+          {menuInfo.label}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default MenuItem;
