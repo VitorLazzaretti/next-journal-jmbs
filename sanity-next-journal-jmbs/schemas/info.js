@@ -22,18 +22,24 @@ export default {
       validation: Rule => Rule.required()
     },
     {
+      name: 'description',
+      title: 'Descrição',
+      description: 'Pequeno texto que vai embaixo da manchete antes de entrar na notícia. (opcional, mas recomendado)',
+      type: 'text',
+    },
+    {
       name: 'artwork',
       title: 'Obra Referenciada',
       description: 'Livro/Anime/Universo de referência que utilizamos',
       type: 'reference',
-      to: {type: 'artwork'},
+      to: { type: 'artwork' },
       validation: Rule => Rule.required()
     },
     {
       name: 'author',
       title: 'Autor',
       type: 'reference',
-      to: {type: 'author'},
+      to: { type: 'author' },
       validation: Rule => Rule.required()
     },
     {
@@ -49,7 +55,7 @@ export default {
       name: 'infoType',
       title: 'Tipo de Notícia',
       type: 'reference',
-      to: {type: 'infoType'},
+      to: { type: 'infoType' },
       validation: Rule => Rule.required()
     },
     {
@@ -74,7 +80,7 @@ export default {
       media: 'mainImage',
     },
     prepare(selection) {
-      const {author} = selection
+      const { author } = selection
       return Object.assign({}, selection, {
         subtitle: author && `by ${author}`,
       })
