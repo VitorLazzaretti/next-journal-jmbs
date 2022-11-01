@@ -8,7 +8,8 @@ const DefaultNews = ({ newsData }: any) => {
   return (
     <div
       onClick={() => { query.replace("/report"); }}
-      className="w-full flex flex-col space-y-4 md:space-y-5 lg:space-y-6 p-1 pb-6 sm:pb-12 md:pb-16 lg:pb-20 cursor-pointer"
+      className="w-full flex flex-col space-y-4 md:space-y-5 lg:space-y-6 p-1 pb-6 sm:pb-12 md:pb-16 lg:pb-20 cursor-pointer
+      border-b-[1px] border-solid border-gray-500 hover:bg-gray-100"
     >
       <div className="flex items-center space-x-2">
         <Icon name="editorial" size="30px" />

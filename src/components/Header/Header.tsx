@@ -37,7 +37,7 @@ const Header = () => {
         onMouseOver={() => { setInputWidth("w-3/5"); }}
         onMouseOut={() => { setInputWidth("w-20"); setInputValue(""); inputRef.current?.blur(); }}>
         <input
-          className={`bg-transparent border-b-[1px] px-2 py-1 border-solid border-gray-500 placeholder:text-[#5e5e5e] transition-all duration-500 ease-in-out outline-none ${inputWidth}`}
+          className={`bg-transparent px-2 py-1 border-b-[1px] border-solid border-gray-500 placeholder:text-[#5e5e5e] transition-all duration-500 ease-in-out outline-none ${inputWidth}`}
           placeholder='Search...'
           onChange={(e) => setInputValue(e.target.value)}
           value={inputValue}
