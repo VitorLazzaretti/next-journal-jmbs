@@ -47,6 +47,7 @@ const AsideMenu = ({ open, handleMenu }: Props) => {
           }}
           selected={slug === value.iconName ?? false}
           open={open}
+          handleMenu={handleMenu}
         />
       ))}
     </aside>
