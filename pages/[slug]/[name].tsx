@@ -14,7 +14,8 @@ const Post = ({ post }: Props) => {
   return (
     <div className="max-w-3xl mx-auto">
       <Head>
-        <title> {post.title} </title>
+      <title>JMBS</title>
+
       </Head>
 
       <img

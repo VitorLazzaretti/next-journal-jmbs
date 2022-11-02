@@ -17,9 +17,10 @@ const MainLayout = ({ children }: Props) => {
     <div className='w-full min-h-screen'>
       <div
         style={{
-          width: "calc(100% - 96px)",
-          marginLeft: "96px"
+          width: "",
+          marginLeft: ""
         }}
+        className="w-[calc(100% - 64px)] ml-16 sm:w-[calc(100% - 96px)] sm:ml-24"
       >
         <Header />
         <main className="max-w-7xl m-auto pt-4 justify-center">
