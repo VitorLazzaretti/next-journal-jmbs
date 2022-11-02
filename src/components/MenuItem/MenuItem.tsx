@@ -1,6 +1,6 @@
 import React from "react";
 import { useRouter } from "next/router";
-import { MenuItemProps } from "../../types/MenuItemProps";
+import { MenuItemProps } from "../../types/types";
 import Icon from "../Icon/Icon";
 
 type props = {
@@ -13,7 +13,7 @@ const MenuItem = ({ menuInfo, selected, open }: props) => {
   const query = useRouter();
 
   return (
-    <div onClick={() => { query.replace(`/${menuInfo.toPage}`); }}>
+    <div onClick={() => { query.replace(`${menuInfo.toPage}`); }}>
       <div className='w-full flex center justify-start'>
         <div className='w-24 flex justify-center items-center'>
           <Icon

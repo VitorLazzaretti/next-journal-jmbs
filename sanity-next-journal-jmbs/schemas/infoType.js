@@ -11,9 +11,9 @@ export default {
       validation: Rule => Rule.required()
     },
     {
-      name: 'Slug',
+      name: 'slug',
       title: 'Slug',
-      type: 'slug',
+      type: 'string',
       description: 'Os tipos já estão criados, não crie novos campos, por favor!',
       validation: Rule => Rule.required()
     },

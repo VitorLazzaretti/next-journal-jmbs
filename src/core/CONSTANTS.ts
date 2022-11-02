@@ -1,4 +1,4 @@
-import { MenuItemProps } from "../types/MenuItemProps";
+import { MenuItemProps } from "../types/types";
 
 const MenuOptions: MenuItemProps[] = [
   {

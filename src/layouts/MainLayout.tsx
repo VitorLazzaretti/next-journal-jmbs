@@ -22,7 +22,7 @@ const MainLayout = ({ children }: Props) => {
         }}
       >
         <Header />
-        <main>
+        <main className="max-w-7xl m-auto pt-4 justify-center">
           {children}
         </main>
         <AsideMenu open={isMenuOpen} handleMenu={handleMenu} />

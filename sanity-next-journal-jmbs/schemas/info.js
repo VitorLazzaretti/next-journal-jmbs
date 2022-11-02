@@ -1,6 +1,6 @@
 export default {
   name: 'info',
-  title: 'Nova Notícia',
+  title: 'Notícias',
   type: 'document',
   fields: [
     {
@@ -57,12 +57,6 @@ export default {
       type: 'reference',
       to: { type: 'infoType' },
       validation: Rule => Rule.required()
-    },
-    {
-      name: 'publishedAt',
-      title: 'Data de Publicação',
-      description: 'Ignore este campo',
-      type: 'datetime',
     },
     {
       name: 'body',
