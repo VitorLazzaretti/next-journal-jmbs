@@ -15,7 +15,7 @@ const MenuItem = ({ menuInfo, selected, open }: props) => {
   return (
     <div onClick={() => { query.replace(`${menuInfo.toPage}`); }}>
       <div className='w-full flex center justify-start'>
-        <div className='w-24 flex justify-center items-center'>
+        <div className='w-16 sm:w-24 flex justify-center items-center'>
           <Icon
             name={menuInfo.iconName}
             selected={selected}
