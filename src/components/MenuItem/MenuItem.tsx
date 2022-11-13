@@ -14,7 +14,9 @@ const MenuItem = ({ menuInfo, selected, open, handleMenu }: props) => {
   const query = useRouter();
 
   return (
-    <div onClick={() => { query.replace(`${menuInfo.toPage}`); handleMenu(false); }}>
+    <div
+      onClick={() => { query.replace(`${menuInfo.toPage}`); handleMenu(false); }}
+    >
       <div className='w-full flex center justify-start'>
         <div className='w-16 sm:w-24 flex justify-center items-center'>
           <Icon

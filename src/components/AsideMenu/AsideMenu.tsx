@@ -23,7 +23,7 @@ const AsideMenu = ({ open, handleMenu }: Props) => {
       onMouseOut={() => {
         handleMenu(false);
       }}
-      className={`${open ? "w-96" : "w-16 sm:w-24"} h-screen fixed z-50 top-0 left-0 bg-white shadow-lg flex flex-col space-y-6`}>
+      className={`${open ? "w-96" : "w-16 sm:w-24"} h-screen fixed z-50 top-0 left-0 bg-white shadow-lg flex flex-col space-y-4`}>
       <div className={"h-20 w-24 hidden lg:flex items-center justify-center"}>
         <Logo />
       </div>

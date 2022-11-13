@@ -5,12 +5,15 @@ import { sanityClient, urlFor } from "../../sanity";
 import PortableText from "react-portable-text";
 import Head from "next/head";
 import { News } from "../../src/types/types";
+import { useRouter } from "next/router";
 
 type Props = {
   post: News
 }
 
 const Post = ({ post }: Props) => {
+  const url = useRouter();
+
   return (
     <div className="max-w-3xl mx-auto">
       <Head>
@@ -28,17 +31,38 @@ const Post = ({ post }: Props) => {
       <div className="h-full w-full">
         <article className=' p-5'>
           <h1 className='text-2xl md:text-4xl font-medium font-serif mt-10 mb-3'>{post.title}</h1>
-          <div className='text-sm md:text-base font-light font-mono text-gray-400 my-4'>
-            Caro Leitor, enquanto estiver apreciando este texto, imagine-se dentro do universo de <b>{post.artwork.name}</b>, de {" "}
-            <b>{post.artwork.writter}</b>. Caso deseje conhecer mais sobre a obra, clique{" "}
-            <a
-              target="_blank"
-              rel="noreferrer"
-              href={post.artwork.link_description}
-              className="underline text-indigo-400 hover:text-indigo-700"
-            > aqui neste link
-            </a> para ser redirecionado a uma página externa explicativa.
-          </div>
+          {(url.query.slug === "interview" || url.query.slug === "letter" || url.query.slug === "draw") ?
+            <></>
+            : null}
+
+          {(url.query.slug === "review") ?
+            <div className='text-sm md:text-base font-light font-mono text-gray-400 my-4'>
+              Caro Leitor, esta é uma resenha de <b>{post.artwork.name}</b>, de {" "}
+              <b>{post.artwork.writter}</b>. Caso deseje conhecer mais sobre a obra, clique{" "}
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href={post.artwork.link_description}
+                className="underline text-indigo-400 hover:text-indigo-700"
+              > aqui neste link
+              </a> para ser redirecionado a uma página externa explicativa.
+            </div>
+            : null}
+
+          {(url.query.slug !== "interview" && url.query.slug !== "letter" && url.query.slug !== "draw" && url.query.slug !== "review") ?
+            <div className='text-sm md:text-base font-light font-mono text-gray-400 my-4'>
+              Caro Leitor, enquanto estiver apreciando este texto, imagine-se dentro do universo de <b>{post.artwork.name}</b>, de {" "}
+              <b>{post.artwork.writter}</b>. Caso deseje conhecer mais sobre a obra, clique{" "}
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href={post.artwork.link_description}
+                className="underline text-indigo-400 hover:text-indigo-700"
+              > aqui neste link
+              </a> para ser redirecionado a uma página externa explicativa.
+            </div>
+            : null}
+
           <div className='flex items-center space-x-2 md:space'>
             <img
               className='h-10 w-10 rounded-full object-cover'
