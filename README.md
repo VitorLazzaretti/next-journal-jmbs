@@ -15,7 +15,7 @@ This project is memorable to me because it was the last one I did for school. Th
 ### Main Dependencies
 
 * [TailwindCSS](https://tailwindcss.com/) - CSS Framework Packed with Classes
-* [Sanity.io](https://www.sanity.io/ - Platform for structured content
+* [Sanity.io](https://www.sanity.io/) - Platform for structured content
 
 ## How to Execute the Project
 
