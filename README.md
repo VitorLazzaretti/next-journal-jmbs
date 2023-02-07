@@ -27,7 +27,7 @@ Requirements:
 git clone https://github.com/VitorLazzarettiDev/next-journal-jmbs
 
 # enter directory
-cd next-whatsapp-project
+cd next-journal-jmbs
 
 # install dependencies
 npm install
